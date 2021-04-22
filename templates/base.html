@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="{{ url_for('static', filename='css/multiColumnTemplate.css') }}" rel="stylesheet" type="text/css">
+		<title>{{title}}</title>
+	</head>
+	<body>
+		<div class="primary_header"></div>
+			<div class="secondary_header"></div>
+
+        
+		<!-- Контейнер для вставки содержимого дочерних блоков -->
+		<main role="main" class="container">
+			{% block content %}{% endblock %} <!-- Место, куда будет вставляться содержимое дочерних блоков -->
+		</main>
+		
+	</body>
+</html>

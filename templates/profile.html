@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Light Theme</title>
+<link href="{{ url_for('static', filename='css/simpleGridTemplate.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h4 class="logo"></h4>
+  </header>
+  <section class="intro">
+    <div class="column">
+      <h3>{{user.name}}</h3>
+      <h5 style="color:#FFFFFF">{{user.email}}</h5>
+      <img src="{{ url_for('static', filename='profile_pics/default.jpg')}}" alt="" class="profile">
+      <h4>Сменить аватарку</h4>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1"><br>
+      <button>загрузить</button>
+      </div>
+    <div class="column">
+      <h3>О Вас</h3>
+      <p style="color:#FFFFFF">{{user.about}}</p>
+      <p style="color:#6DC7D0">Lore magnaquip ex ea commodo consequat.m dolore eua commodo consequat.m dolore eu fugiat nullaLore m fugiat nullaLore magnaquip ex ea commodo consequat.m dolore eu fugiat nulla </p>
+    </div>
+  </section>
+  <div>
+    <div class="thumbnail"><img src="file:///C|/Users/Жека/AppData/Roaming/Adobe/Dreamweaver 2021/ru_RU/Configuration/Temp/Assets/eam6611.tmp/images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
+      <h4><a href=/login>БИЛД</a></h4>
+      <p>составить пост</p>
+    </div>
+    <div class="thumbnail"> <a href="#"><img src="file:///C|/Users/Жека/AppData/Roaming/Adobe/Dreamweaver 2021/ru_RU/Configuration/Temp/Assets/eam6611.tmp/images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
+      <h4>КАРТА</h4>
+      <p>составить пост</p>
+    </div>
+    <div class="thumbnail"> <a href="#"><img src="file:///C|/Users/Жека/AppData/Roaming/Adobe/Dreamweaver 2021/ru_RU/Configuration/Temp/Assets/eam6611.tmp/images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
+		<h4>КОМАНДА</h4>
+      <p>составить пост</p>
+    </div>
+    <div class="thumbnail"> <a href="#"><img src="file:///C|/Users/Жека/AppData/Roaming/Adobe/Dreamweaver 2021/ru_RU/Configuration/Temp/Assets/eam6611.tmp/images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
+      <h4>ГАЙД</h4>
+      <p>составить пост</p>
+  </div>
+</div>
+</div>
+</body>
+</html>
