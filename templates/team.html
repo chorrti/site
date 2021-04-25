@@ -18,6 +18,13 @@
             {% for error in form.character_class_1.errors %}
                 <p class="alert alert-danger" role="alert">{{error}}</p>
             {% endfor %}
+        <p>
+            {{form.weapon_1.label}}<br>
+            {{form.weapon_1(class="form-control")}}<br>
+            {% for error in form.weapon_1.errors %}
+                <p class="alert alert-danger" role="alert">{{error}}</p>
+            {% endfor %}
+        </p>
         </p>
         <p>
             {{form.character_2.label}}<br>
@@ -30,6 +37,13 @@
             {{form.character_class_2.label}}<br>
             {{form.character_class_2(class="form-control")}}<br>
             {% for error in form.character_class_2.errors %}
+                <p class="alert alert-danger" role="alert">{{error}}</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{form.weapon_2.label}}<br>
+            {{form.weapon_2(class="form-control")}}<br>
+            {% for error in form.weapon_2.errors %}
                 <p class="alert alert-danger" role="alert">{{error}}</p>
             {% endfor %}
         </p>
@@ -48,6 +62,13 @@
             {% endfor %}
         </p>
         <p>
+            {{form.weapon_3.label}}<br>
+            {{form.weapon_3(class="form-control")}}<br>
+            {% for error in form.weapon_3.errors %}
+                <p class="alert alert-danger" role="alert">{{error}}</p>
+            {% endfor %}
+        </p>
+        <p>
             {{form.character_4.label}}<br>
             {{form.character_4(class="form-control")}}<br>
             {% for error in form.character_4.errors %}
@@ -58,6 +79,13 @@
             {{form.character_class_4.label}}<br>
             {{form.character_class_4(class="form-control")}}<br>
             {% for error in form.character_class_4.errors %}
+                <p class="alert alert-danger" role="alert">{{error}}</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{form.weapon_4.label}}<br>
+            {{form.weapon_4(class="form-control")}}<br>
+            {% for error in form.weapon_4.errors %}
                 <p class="alert alert-danger" role="alert">{{error}}</p>
             {% endfor %}
         </p>

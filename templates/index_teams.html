@@ -23,11 +23,11 @@
 			<p>№4 {{item.character_4}}</p>
 			<p>{{item.character_class_4}}</p><br>
 			<p>Артефакты: {{item.artefacts}}</p>
-			<p> таланты: {{item.content}}</p><br>
+			<p> таланты: {{item.artefacts}}</p><br>
 			<p>{{item.content}}</p>
 			<p style="color:#6DC7D0">этот текст нужен чтобы выровнять подложку этот текст нужен чтобы выровнять подложку этот текст нужен чтобы выровнять подложку</p>
 			{% if user.is_authenticated and user == item.user %}
-			<p><i><a href="/builds_delete/{{item.id}}" class="btn btn-danger">Удалить</a></i></p>
+			<p><i><a href="/teams_delete/{{item.id}}" class="btn btn-danger">Удалить</a></i></p>
 			{% endif %}
 	</div>
 </section>

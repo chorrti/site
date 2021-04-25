@@ -92,7 +92,7 @@ def login():
 def logout():
     # выход из аккаунта
     logout_user()
-    return redirect('/')
+    return redirect('/homepage')
 
 
 @app.route('/profile')
@@ -231,7 +231,7 @@ def teams_delete(id):
         db.commit()
     else:
         abort(404)
-    return redirect('/index_builds')
+    return redirect('/index_teams')
 
 
 if __name__ == '__main__':
