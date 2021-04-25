@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Добавление билда</h3>
+    <form action="" method="post">
+        {{form.hidden_tag()}}
+        {{form.csrf_token}}
+        <p>
+            {{form.character.label}}<br>
+            {{form.character(class="form-control")}}<br>
+            {% for error in form.character.errors %}
+                <p class="alert alert-danger" role="alert">{{error}}</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{form.character_class.label}}<br>
+            {{form.character_class(class="form-control")}}<br>
+            {% for error in form.character_class.errors %}
+                <p class="alert alert-danger" role="alert">{{error}}</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{form.artefacts.label}}<br>
+            {{form.artefacts(class="form-control")}}<br>
+            {% for error in form.artefacts.errors %}
+                <p class="alert alert-danger" role="alert">{{error}}</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{form.talents.label}}<br>
+            {{form.talents(class="form-control")}}<br>
+            {% for error in form.talents.errors %}
+                <p class="alert alert-danger" role="alert">{{error}}</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{form.content.label}}<br>
+            {{form.content(class="form-control") }}<br>
+            {% for error in form.content.errors %}
+                <p content="alert alert-danger" role="alert">{{error}}</p>
+            {% endfor %}
+        </p>
+        <p>{{form.submit(type="submit", class="btn btn-primary")}}</p>
+        {{message}}
+    </form>
+{% endblock %}

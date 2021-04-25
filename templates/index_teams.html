@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+		<h1></h1>
+		<h4><a href=/team_post class="btn btn-secondary">Добавить команду</a></h4>
+    {% endif %}
+	{% for item in teams%}
+<section class="intro">
+    <div class="column">
+		<p><b><center>{{item.user.name}}</center></b></p>
+			<img src="{{ url_for('static', filename='profile_pics/default.jpg')}}" alt="" class="pic" width=250>
+		<h6>{{item.created_date}}</h6>
+	</div>
+	<div class="column">
+		<p class="col-md6 border rounded">
+			<p>№1 {{item.character_1}}</p>
+			<p>{{item.character_class_1}}</p><br>
+			<p>№2 {{item.character_2}}</p>
+			<p>{{item.character_class_2}}</p><br>
+			<p>№3 {{item.character_3}}</p>
+			<p>{{item.character_class_3}}</p><br>
+			<p>№4 {{item.character_4}}</p>
+			<p>{{item.character_class_4}}</p><br>
+			<p>Артефакты: {{item.artefacts}}</p>
+			<p> таланты: {{item.content}}</p><br>
+			<p>{{item.content}}</p>
+			<p style="color:#6DC7D0">этот текст нужен чтобы выровнять подложку этот текст нужен чтобы выровнять подложку этот текст нужен чтобы выровнять подложку</p>
+			{% if user.is_authenticated and user == item.user %}
+			<p><i><a href="/builds_delete/{{item.id}}" class="btn btn-danger">Удалить</a></i></p>
+			{% endif %}
+	</div>
+</section>
+	{% endfor %}
+{% endblock %}

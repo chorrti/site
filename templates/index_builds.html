@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+		<h1></h1>
+		<h4><a href=/build_post class="btn btn-secondary">Добавить билд</a></h4>
+    {% endif %}
+	{% for item in builds%}
+<section class="intro">
+    <div class="column">
+		<p><b><center>{{item.user.name}}</center></b></p>
+			<img src="{{ url_for('static', filename='profile_pics/default.jpg')}}" alt="" class="pic" width=250>
+		<h6>{{item.created_date}}</h6>
+	</div>
+	<div class="column">
+		<p class="col-md6 border rounded">
+			<h3>{{item.character}}</h3>
+			<p>Класс персонажа: {{item.character_class}}</p>
+			<p>Артефакты: {{item.artefacts}}</p>
+			<p>Необходимые таланты: {{item.talents}}</p><br>
+			<p>{{item.content}}</p>
+			<p style="color:#6DC7D0">этот текст нужен чтобы выровнять подложку этот текст нужен чтобы выровнять подложку этот текст нужен чтобы выровнять подложку</p>
+			{% if user.is_authenticated and user == item.user %}
+			<p><i><a href="/builds_delete/{{item.id}}" class="btn btn-danger">Удалить</a></i></p>
+			{% endif %}
+	</div>
+</section>
+	{% endfor %}
+{% endblock %}

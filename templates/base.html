@@ -5,16 +5,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="{{ url_for('static', filename='css/multiColumnTemplate.css') }}" rel="stylesheet" type="text/css">
 		<title>{{title}}</title>
-	</head>
-	<body>
-		<div class="primary_header"></div>
-			<div class="secondary_header"></div>
-
-        
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="primary_header">
+      <h1 class="title"></h1>
+    </div>
+    <nav class="secondary_header" id="menu">
+      <ul>
+		  <li><a href=/homepage>ГЛАВНАЯ</a></li>
+		  <li><a href=/index>ЛЕНТА</a></li>
+		  <li><a href=/index_builds>БИЛДЫ</a></li>
+		  <li><a href=/index_teams>КОМАНДЫ</a></li>
+		  {% if user.is_authenticated %}
+		  <li><a href=/profile>ПРОФИЛЬ</a></li>
+		  <li><a href=/logout>ВЫХОД</a></li>
+		  {% else %}
+		  <li><a href=/register>РЕГИСТРАЦИЯ</a></li>
+		  <li><a href=/login>ВХОД</a></li>
+		  {% endif %}
+      </ul>
+    </nav>
+  </header>
 		<!-- Контейнер для вставки содержимого дочерних блоков -->
 		<main role="main" class="container">
 			{% block content %}{% endblock %} <!-- Место, куда будет вставляться содержимое дочерних блоков -->
 		</main>
-		
-	</body>
+</div>
+</body>
 </html>

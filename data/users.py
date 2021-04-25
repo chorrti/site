@@ -11,12 +11,16 @@ class User(SqlAlchemyBase, UserMixin):
     __tablename__ = 'users'
     # столбцы таблицы users:
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True, autoincrement=True)
-    name = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    name = sqlalchemy.Column(sqlalchemy.String, nullable=True, unique=True)
     about = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     email = sqlalchemy.Column(sqlalchemy.String, index=True, unique=True, nullable=True)
+    #pic = sqlalchemy.Column(sqlalchemy.String, nullable=False, default='default.jpg')
     hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    created_date = sqlalchemy.Column(sqlalchemy.DateTime, default=datetime.datetime.now)
     # сообщения пользователя
     news = orm.relation('News', back_populates='user')
+    build_posts = orm.relation('Builds', back_populates='user')
+    team_posts = orm.relation('Teams', back_populates='user')
 
     def set_password(self, password):
         # создание хэша пароля

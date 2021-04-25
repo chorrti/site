@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+		<h1></h1>
+		<h4><a href=/post class="btn btn-secondary">Добавить новость</a></h4>
+    {% endif %}
+	{% for item in news%}
+<section class="intro">
+    <div class="column">
+		<p><b><center>{{item.user.name}}</center></b></p>
+			<img src="{{ url_for('static', filename='profile_pics/default.jpg')}}" alt="" class="pic" width=250>
+		<h6>{{item.created_date}}</h6>
+	</div>
+	<div class="column">
+		<p class="col-md6 border rounded">
+			<h3>{{item.title}}</h3>
+			<p>{{item.content}}</p>
+			<p style="color:#6DC7D0">этот текст нужен чтобы выровнять подложку этот текст нужен чтобы выровнять подложку этот текст нужен чтобы выровнять подложку</p>
+			{% if user.is_authenticated and user == item.user %}
+			<p><i><a href="/news_delete/{{item.id}}" class="btn btn-danger">Удалить</a></i></p>
+			{% endif %}
+	</div>
+</section>
+	{% endfor %}
+{% endblock %}

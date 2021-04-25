@@ -25,22 +25,25 @@
 .row.blockDisplay {
 	display: block;
 }
+.intro.column.pic {
+width: 100%
+
 .column_half {
 	width: 50%;
 	float: left;
 	margin-top: 0px;
 }
 .columns {
-	width: 25%;
+	width: 60%;
 	float: left;
 	font-family: "Source Sans Pro";
 	color: #A5A5A5;
-	line-height: 24px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	line-height: 2px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	text-align: justify;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	padding-left: 0px;
 	padding-right: 0px;
 	margin-left: 0px;
@@ -563,14 +566,14 @@ header {
 	opacity: 0.8;
 }
 .intro .column p {
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
 	text-align: justify;
 	line-height: 25px;
 	font-weight: lighter;
-	margin-left: 20px;
-	margin-right: 20px;
-	width: 80%;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 90%;
 	margin-top: 4%;
 }
 .button {
@@ -617,9 +620,6 @@ footer {
 .intro {
 	display: inline-block;
 	background-color: #6DC7D0;
-}
-.profile {
-	width: 50%;
 }
 .gallery .thumbnail .tag {
 	color: #5D5E5D;
@@ -701,9 +701,6 @@ footer {
 	width: 100%;
 	margin-left: 0px;
 	margin-right: 0px;
-}
-.profile {
-	width: 100%;
 }
 .intro .column p {
 	width: 90%;
